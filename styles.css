@@ -1,0 +1,163 @@
+/* General Styles */
+/* Enable Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  overflow: auto;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Romantic Fonts */
+.romantic-font {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+}
+
+.message {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Welcome Pop-up */
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #e73c7e;
+}
+
+.popup-content button {
+  background: #e73c7e;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Flower and Butterfly Animation */
+#animation-section {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+/* .flower {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: url('flower.png') no-repeat center/contain;
+  animation: bloom 5s infinite;
+} */
+
+/* .butterfly {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background: url('flower.png') no-repeat center/contain;
+  animation: fly 10s infinite;
+} */
+
+@keyframes bloom {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+
+@keyframes fly {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(200px, -100px); }
+  50% { transform: translate(-200px, 100px); }
+  75% { transform: translate(200px, 100px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Falling Flowers */
+.falling-flower {
+  position: absolute;
+  top: -50px;
+  width: 30px;
+  height: 30px;
+  background: url('flower.png') no-repeat center/contain;
+  animation: fall linear infinite;
+  opacity: 0.7; /* Reduced opacity */
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(150vh);
+  }
+}
+
+/* Wind Effect */
+/* Wind Effect - Slow and Gentle Shake */
+.shake {
+  animation: wind 5s ease-in-out infinite;
+}
+
+@keyframes wind {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-2px) rotate(-0.5deg); /* Slight left movement */
+  }
+  50% {
+    transform: translateX(2px) rotate(0.5deg); /* Slight right movement */
+  }
+  75% {
+    transform: translateX(-1px) rotate(-0.3deg); /* Slight left movement */
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Music Toggle Button */
+.music-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #e73c7e;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
